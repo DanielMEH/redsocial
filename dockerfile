@@ -11,8 +11,7 @@ RUN go mod download
 COPY . .
 
 # build optimizado y pequeño
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o main .
-
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o main ./cmd
 # ---------- RUNNER ----------
 FROM alpine:latest
 
@@ -23,13 +22,11 @@ RUN apk add --no-cache tzdata
 
 # Copiamos binario y data necesaria
 COPY --from=builder /app/main .
-COPY --from=builder /app/data ./data
-COPY --from=builder /app/public ./public
-
+COPY --from=builder /app/internal ./internal
 # Configurar zona horaria (lo que tu proyecto necesita)
 ENV TZ=America/Bogota
 
 EXPOSE 3003
 
-CMD ["./cmd/main"]
+CMD ["./main"]
 
