@@ -1,15 +1,29 @@
 [build]
-# Esta es la ruta a tu main.go
+# Añadimos un pequeño delay y forzamos la limpieza del binario viejo
 cmd = "go build -o ./tmp/main.exe ./cmd/main.go"
+bin = "tmp\\main.exe"
+full_bin = ".\\tmp\\main.exe"
 
-# Este es el binario que Air va a ejecutar después de compilar
-bin = "./tmp/main.exe"
+# MUY IMPORTANTE: Incluye los subdirectorios de internal
+include_dir = ["cmd", "internal"]
+exclude_dir = ["assets", "tmp", "vendor", "logs"]
+include_ext = ["go", "tpl", "tmpl", "html", "json", "env"]
 
-# Directorios que Air debe vigilar (añade cmd si no está)
-include_dir = ["cmd", "internal", "pkg"]
+# Retraso para evitar reinicios dobles en Windows
+delay = 1000 # ms
 
-# Extensiones que disparan el reinicio
-include_ext = ["go", "tpl", "tmpl", "html", "json"]
+# Matar el proceso anterior de forma agresiva
+stop_on_error = true
 
-# Directorios a ignorar
-exclude_dir = ["assets", "tmp", "vendor", "docs"]
+[log]
+time = true
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+# Limpiar la carpeta tmp al salir
+clean_on_exit = true

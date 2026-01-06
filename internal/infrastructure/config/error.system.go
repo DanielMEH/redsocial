@@ -32,15 +32,17 @@ Codigos de errores ejemplo 401(1001,1003) con procesos diferente pero conectado 
 const (
 	ErrCodeAuthInvalidCredentials                = 1001
 	ErrCodeEntitiesDataInvalid                   = 1002
-	ErrCodeUnprocessableEntityInvalidDataRequest = 1003
+	ErrCodeBadRequest                            = 1003
+	ErrCodeUnprocessableEntityInvalidDataRequest = 1004
+	ErrCodeStatusUnauthorized                    = 1005
 
 	ErrCodeInternalServer = 5000
 )
 
 // NewAuthInvalidCredentials imita a Self::AuthInvalidCredentials(String)
-func NewAuthInvalidCredentials(detail string) *AppError {
+func NewAuthInvalidCredentials(err error) *AppError {
 	return &AppError{
-		Message:      "Credenciales inválidas: " + detail,
+		Message:      "Credenciales inválidas: " + err.Error(),
 		Code:         ErrCodeAuthInvalidCredentials,
 		InternalCode: "AUTH_INVALID_CREDENTIALS",
 		Status:       http.StatusUnauthorized,
@@ -63,6 +65,14 @@ func NewInternalServerError(err error) *AppError {
 		Status:       http.StatusInternalServerError,
 	}
 }
+func NewBadRequestError(err error) *AppError {
+	return &AppError{
+		Message:      "Error interno del servidor: " + err.Error(),
+		Code:         ErrCodeBadRequest,
+		InternalCode: "ERROR_BATCH_REQUEST",
+		Status:       http.StatusBadRequest,
+	}
+}
 
 func NewUnprStatusUnprocessableEntity(err error) *AppError {
 	return &AppError{
@@ -70,5 +80,13 @@ func NewUnprStatusUnprocessableEntity(err error) *AppError {
 		Code:         ErrCodeUnprocessableEntityInvalidDataRequest,
 		InternalCode: "INTERNAL_ENTITY_SERVER",
 		Status:       http.StatusUnprocessableEntity,
+	}
+}
+func NewStatusUnauthorized(err error) *AppError {
+	return &AppError{
+		Message:      "No authorizado " + err.Error(),
+		Code:         ErrCodeStatusUnauthorized,
+		InternalCode: "INTERNAL_NO_AUTHORIZED",
+		Status:       http.StatusUnauthorized,
 	}
 }

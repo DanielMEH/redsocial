@@ -12,7 +12,11 @@ import (
 	"go.uber.org/fx"
 )
 
-func configureRouterUser(register *handlers.RegisterAccountHandler, Hstore *types.HandlersStore, _ *config.AppSettings) {
+func configureRouterUser(
+	register *handlers.RegisterAccountHandler,
+	login *handlers.LoginAccountHandler,
+	profile *handlers.GetProfileAccountHandler,
+	Hstore *types.HandlersStore, _ *config.AppSettings) {
 
 	HandlerRouter := types.SliceHandlers{
 		Prefix: "",
@@ -21,6 +25,16 @@ func configureRouterUser(register *handlers.RegisterAccountHandler, Hstore *type
 				Route:   constants.API_ROUTER_STABLE + "/add_new_account",
 				Method:  fiber.MethodPost,
 				Handler: register.RunRegisterAccountHandler,
+			},
+			{
+				Route:   constants.API_ROUTER_STABLE + "/login",
+				Method:  fiber.MethodPost,
+				Handler: login.RunLoginrAccountHandler,
+			},
+			{
+				Route:   constants.API_ROUTER_STABLE + "/profile",
+				Method:  fiber.MethodGet,
+				Handler: profile.RunGetProfileAccountHandler,
 			},
 		},
 	}
@@ -32,6 +46,8 @@ func ModuleEmailsProvider() []fx.Option {
 
 		// 1. Proveemos el Handler (el controlador)
 		fx.Provide(handlers.NewRegisterAccountHandler),
+		fx.Provide(handlers.NewGetProfileAccountHandler),
+		fx.Provide(handlers.NewLoginAccountHandler),
 
 		// 2. Dominios puertos
 		fx.Provide(database.NewServicesDatabase,
@@ -41,6 +57,8 @@ func ModuleEmailsProvider() []fx.Option {
 
 		// fx.Provide(usecases.NewUserUseCase),
 		fx.Provide(application.NewRegisterAccountUseCase),
+		fx.Provide(application.NewLoginAccountUseCase),
+		fx.Provide(application.NewGetProfileAccountUseCase),
 
 		// 3. Invocamos la configuración de rutas
 		fx.Invoke(configureRouterUser),
