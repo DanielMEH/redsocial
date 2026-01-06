@@ -12,7 +12,7 @@ func main() {
 
 	app := server.ProviderServerStorage{}
 	app.Init()
-	app.AddModule(modules.ModuleEmailsProvider())
+	app.AddModule(modules.ModuleUsersProvider())
 	app.Up()
 
 }

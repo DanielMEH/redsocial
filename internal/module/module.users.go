@@ -41,7 +41,7 @@ func configureRouterUser(
 	Hstore.Handlers = append(Hstore.Handlers, HandlerRouter)
 }
 
-func ModuleEmailsProvider() []fx.Option {
+func ModuleUsersProvider() []fx.Option {
 	return []fx.Option{
 
 		// 1. Proveemos el Handler (el controlador)
