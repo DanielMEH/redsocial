@@ -1,0 +1,67 @@
+{"time":"2026-01-06T05:26:11.7650036-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":33516}
+{"time":"2026-01-06T05:26:14.0361103-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":32828}
+{"time":"2026-01-06T05:26:45.0537288-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":27796}
+{"time":"2026-01-06T05:28:09.2491101-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":32548}
+{"time":"2026-01-06T05:28:55.8696809-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":1936}
+{"time":"2026-01-06T05:30:07.0413547-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":28036}
+{"time":"2026-01-06T05:30:33.9543396-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":37064}
+{"time":"2026-01-06T05:31:56.8921579-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":34620}
+{"time":"2026-01-06T05:32:24.1777408-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":30036}
+{"time":"2026-01-06T05:32:41.3572142-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":12328}
+{"time":"2026-01-06T05:32:56.911405-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":408}
+{"time":"2026-01-06T05:33:23.3172405-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":22224}
+{"time":"2026-01-06T05:33:33.3280063-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":18768}
+{"time":"2026-01-06T05:33:34.4461022-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":1480}
+{"time":"2026-01-06T05:33:41.0794113-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":33884}
+{"time":"2026-01-06T05:33:47.1100319-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":35908}
+{"time":"2026-01-06T05:33:57.1561698-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":18924}
+{"time":"2026-01-06T05:34:00.5076893-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":11196}
+{"time":"2026-01-06T05:34:05.240126-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":30288}
+{"time":"2026-01-06T05:34:11.5066905-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":20452}
+{"time":"2026-01-06T05:34:12.9391867-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":34424}
+{"time":"2026-01-06T05:34:14.2265737-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":4284}
+{"time":"2026-01-06T05:34:23.7465283-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:34:30.2645048-05:00","level":"ERROR","msg":"invalid character 'S' looking for beginning of value","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:34:30.2650341-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:34:30.2650341-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0.529}
+{"time":"2026-01-06T05:34:49.311622-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:34:49.3121312-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":115.999}
+{"time":"2026-01-06T05:35:22.6578719-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:35:22.6578719-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":14.274}
+{"time":"2026-01-06T05:37:37.7552018-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:37:37.7552018-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":6.503}
+{"time":"2026-01-06T05:37:38.9187325-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:37:38.9187325-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":4.694}
+{"time":"2026-01-06T05:37:40.1053208-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:37:40.1057802-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":24668,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":3.376}
+{"time":"2026-01-06T05:37:42.4527419-05:00","level":"INFO","msg":"Apagando servidor...","app":"streamingNotifyHub","pid":24668}
+{"time":"2026-01-06T05:39:28.6363102-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":8128}
+{"time":"2026-01-06T05:39:36.8588236-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":8128}
+{"time":"2026-01-06T05:39:36.8593684-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":8128,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":11.733}
+{"time":"2026-01-06T05:39:40.0585336-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":8128}
+{"time":"2026-01-06T05:39:40.0590618-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":8128,"ip":"127.0.0.1","method":"GET","path":"/api/v1/system/profile","status":200,"latency_ms":7.962}
+{"time":"2026-01-06T05:42:17.0396676-05:00","level":"INFO","msg":"Apagando servidor...","app":"streamingNotifyHub","pid":8128}
+{"time":"2026-01-06T05:42:21.6413748-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":19656}
+{"time":"2026-01-06T05:42:37.9684139-05:00","level":"ERROR","msg":"parsing time \"2002-31-10T00:00:00Z\": month out of range","app":"streamingNotifyHub","pid":19656}
+{"time":"2026-01-06T05:42:37.9689371-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":19656}
+{"time":"2026-01-06T05:42:37.9689371-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":19656,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0.523}
+{"time":"2026-01-06T05:44:43.8461773-05:00","level":"INFO","msg":"Apagando servidor...","app":"streamingNotifyHub","pid":19656}
+{"time":"2026-01-06T05:45:39.463425-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":35900}
+{"time":"2026-01-06T05:45:51.7318654-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":35900}
+{"time":"2026-01-06T05:45:51.7324575-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":35900,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":125.064}
+{"time":"2026-01-06T05:47:42.1328977-05:00","level":"INFO","msg":"Apagando servidor...","app":"streamingNotifyHub","pid":35900}
+{"time":"2026-01-06T05:47:48.472354-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":22488}
+{"time":"2026-01-06T05:47:59.6204679-05:00","level":"INFO","msg":"Listening on server HTTPS/2 -  http://streamingNotifyHub:3003","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:05.2280827-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:05.2287142-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0.631}
+{"time":"2026-01-06T05:48:14.0532598-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:14.0532598-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0}
+{"time":"2026-01-06T05:48:15.4292437-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:15.4292437-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0}
+{"time":"2026-01-06T05:48:26.4722412-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:26.4722412-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":1.001}
+{"time":"2026-01-06T05:48:27.7063132-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:48:27.7063132-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":0}
+{"time":"2026-01-06T05:49:22.9078623-05:00","level":"DEBUG","msg":"ssss","app":"streamingNotifyHub","pid":1852}
+{"time":"2026-01-06T05:49:22.9085293-05:00","level":"INFO","msg":"http_request","app":"streamingNotifyHub","pid":1852,"ip":"127.0.0.1","method":"POST","path":"/api/v1/system/add_new_account","status":200,"latency_ms":111.342}
+{"time":"2026-01-06T05:50:48.5645937-05:00","level":"INFO","msg":"Apagando servidor...","app":"streamingNotifyHub","pid":1852}

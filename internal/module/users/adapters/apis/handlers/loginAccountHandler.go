@@ -18,7 +18,7 @@ func NewLoginAccountHandler(useCases *application.LoginAccountUseCase) *LoginAcc
 	return &LoginAccountHandler{useCase: *useCases}
 }
 
-func (uc *LoginAccountHandler) RunLoginrAccountHandler(c *fiber.Ctx) error {
+func (uc *LoginAccountHandler) RunLoginAccountHandler(c *fiber.Ctx) error {
 
 	var data command.EntityLoginAccountCommand
 

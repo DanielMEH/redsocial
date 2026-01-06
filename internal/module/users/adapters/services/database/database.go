@@ -4,7 +4,6 @@ import (
 	"errors"
 	"log/slog"
 	"os"
-	"time"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgconn"
@@ -57,8 +56,10 @@ func (sd *ServicesDatabaseAdapter) RegisterAccount(data command.EntityRegisterAc
 		Email:    data.Email,
 		Password: string(hashedPassword),
 		Profile: models.Profile{
+			FirstName: data.FirstName,
+			LastName:  data.LastName,
 			Alias:     data.DisplayName,
-			BirthDate: time.Now(),
+			BirthDate: data.BirthDate,
 		},
 	}
 
@@ -69,6 +70,7 @@ func (sd *ServicesDatabaseAdapter) RegisterAccount(data command.EntityRegisterAc
 		var pgErr *pgconn.PgError
 		if errors.As(result.Error, &pgErr) {
 			if pgErr.Code == "23505" {
+				slog.Error(result.Error.Error())
 				return register.EntityRegisterAccountResponse{},
 					config.NewBadRequestError(errors.New("el correo electrónico  ya está registrado"))
 			}
@@ -80,7 +82,7 @@ func (sd *ServicesDatabaseAdapter) RegisterAccount(data command.EntityRegisterAc
 	value, errJwt := utils.GenerateJWT(string(newUser.ID.String()), uuidValue)
 
 	if errJwt != nil {
-		println("error")
+		slog.Error(errJwt.Error())
 		return register.EntityRegisterAccountResponse{}, config.NewInternalServerError(errJwt)
 	}
 
@@ -138,7 +140,7 @@ func (sd *ServicesDatabaseAdapter) GetProfile(accountId string) (profile.EntityG
 	result := sd.dbgorm.
 		Select("id", "email").
 		Preload("Profile", func(db *gorm.DB) *gorm.DB {
-			return db.Select("user_id", "alias")
+			return db.Select("user_id", "alias", "birth_date", "first_name", "last_name")
 		}).
 		Where("id = ?", accountId).
 		First(&user)
@@ -150,9 +152,9 @@ func (sd *ServicesDatabaseAdapter) GetProfile(accountId string) (profile.EntityG
 	return profile.EntityGetProfileAccountResponse{
 		Message: "Ok",
 		Details: struct {
-			Email     string    "json:\"email\""
-			Alias     string    "json:\"alias\""
-			BirthDate time.Time "json:\"bith_date\""
+			Email     string "json:\"email\""
+			Alias     string "json:\"alias\""
+			BirthDate string "json:\"birth_date\""
 		}{
 			Email:     user.Email,
 			Alias:     user.Profile.Alias,
