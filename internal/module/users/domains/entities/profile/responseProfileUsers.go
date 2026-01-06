@@ -1,12 +1,10 @@
 package profile
 
-import "time"
-
 type EntityGetProfileAccountResponse struct {
 	Message string `json:"message"`
 	Details struct {
-		Email     string    `json:"email"`
-		Alias     string    `json:"alias"`
-		BirthDate time.Time `json:"bith_date"`
+		Email     string `json:"email"`
+		Alias     string `json:"alias"`
+		BirthDate string `json:"birth_date"`
 	} `json:"details"`
 }

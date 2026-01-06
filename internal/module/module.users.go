@@ -29,7 +29,7 @@ func configureRouterUser(
 			{
 				Route:   constants.API_ROUTER_STABLE + "/login",
 				Method:  fiber.MethodPost,
-				Handler: login.RunLoginrAccountHandler,
+				Handler: login.RunLoginAccountHandler,
 			},
 			{
 				Route:   constants.API_ROUTER_STABLE + "/profile",
