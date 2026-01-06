@@ -8,7 +8,7 @@ import (
 
 var (
 	data string = "internal/infrastructure/data"
-	path string = "appsetings.json"
+	path string = "appsettings.json"
 )
 
 type AppSettings struct {

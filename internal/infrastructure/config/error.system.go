@@ -30,7 +30,11 @@ type ResponseSystem struct {
 Codigos de errores ejemplo 401(1001,1003) con procesos diferente pero conectado al mismo codigo de error
 */
 const (
-	ErrCodeAuthInvalidCredentials = 1001
+	ErrCodeAuthInvalidCredentials                = 1001
+	ErrCodeEntitiesDataInvalid                   = 1002
+	ErrCodeUnprocessableEntityInvalidDataRequest = 1003
+
+	ErrCodeInternalServer = 5000
 )
 
 // NewAuthInvalidCredentials imita a Self::AuthInvalidCredentials(String)
@@ -40,5 +44,31 @@ func NewAuthInvalidCredentials(detail string) *AppError {
 		Code:         ErrCodeAuthInvalidCredentials,
 		InternalCode: "AUTH_INVALID_CREDENTIALS",
 		Status:       http.StatusUnauthorized,
+	}
+}
+
+func NewErrCodeEntitiesDataInvalid(err error) *AppError {
+	return &AppError{
+		Message:      "Error de entidades informacion no valida " + err.Error(),
+		Code:         ErrCodeEntitiesDataInvalid,
+		InternalCode: "INTERNAL_ENTITY_SERVER",
+		Status:       http.StatusUnprocessableEntity,
+	}
+}
+func NewInternalServerError(err error) *AppError {
+	return &AppError{
+		Message:      "Error interno del servidor: " + err.Error(),
+		Code:         ErrCodeInternalServer,
+		InternalCode: "INTERNAL_SERVER_ERROR",
+		Status:       http.StatusInternalServerError,
+	}
+}
+
+func NewUnprStatusUnprocessableEntity(err error) *AppError {
+	return &AppError{
+		Message:      "Error interno no se pudo formatear el json del body " + err.Error(),
+		Code:         ErrCodeUnprocessableEntityInvalidDataRequest,
+		InternalCode: "INTERNAL_ENTITY_SERVER",
+		Status:       http.StatusUnprocessableEntity,
 	}
 }
