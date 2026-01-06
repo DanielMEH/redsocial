@@ -1,8 +1,6 @@
 module github.com/redsocial
 
-go 1.24.0
-
-toolchain go1.24.11
+go 1.23.1
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.10
@@ -11,7 +9,7 @@ require (
 	github.com/jackc/pgx/v5 v5.6.0
 	github.com/joho/godotenv v1.5.1
 	go.uber.org/fx v1.24.0
-	golang.org/x/crypto v0.46.0
+	golang.org/x/crypto v0.31.0
 	gorm.io/driver/postgres v1.6.0
 	gorm.io/gorm v1.31.1
 )
@@ -34,7 +32,7 @@ require (
 	go.uber.org/dig v1.19.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	go.uber.org/zap v1.26.0 // indirect
-	golang.org/x/sync v0.19.0 // indirect
-	golang.org/x/sys v0.39.0 // indirect
-	golang.org/x/text v0.32.0 // indirect
+	golang.org/x/sync v0.10.0 // indirect
+	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/text v0.21.0 // indirect
 )
